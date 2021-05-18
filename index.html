@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Hinnakalkulaator</title>
+    <meta name="description" content="Meie keskkonnas on mugav võimalus tellimuse esitamiseks. Teostame veoteenuseid üle Eesti. ">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="assets/css/bootstrap-datepicker.standalone.css">
+    
+    <nav class="navbar navbar-light bg-light navbar-toggler">
+      <div class="container" style="margin: 15px auto;">
+
+        <div class="col-6 col-lg-3"> 
+          <a class="navbar-brand" href="#">
+            <img src="assets/img/Logo2.png" width="150" class="d-inline-block align-top" alt="">
+          </a>
+        </div>
+          <a class="d-none d-lg-inline" href="index.html" style="color: #3d3d3d !important;font-size: 20px;">Home</a>
+          <a class="d-none d-lg-inline" href="#" style="color: #3d3d3d !important;font-size: 20px;">Info</a>
+          <a class="d-none d-lg-inline" href="services.html" style="color: #3d3d3d !important;font-size: 20px;">Services</a>
+          <a class="d-none d-lg-inline" href="#" style="color: #3d3d3d !important;font-size: 20px;">Blog</a>
+          <a class="d-none d-lg-inline" href="#" style="color: #3d3d3d !important;font-size: 20px;">Contact</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse d-lg-none" id="navbarToggleExternalContent" style="width: 100%;">
+        <ul class="d-lg-none d-sm-block" style="list-style: none;text-align: center; margin-top: 25px;">
+          <li style="margin: 15px auto;"><a href="index.html" style="color: #3d3d3d !important;font-size: 20px;">Home</a>
+          </li>
+          <li style="margin: 15px auto;"><a href="#" style="color: #3d3d3d !important;font-size: 20px;">Info</a>
+          </li>
+          <li style="margin: 15px auto;"><a href="services.html" style="color: #3d3d3d !important;font-size: 20px;">Services</a>
+          </li>
+          <li style="margin: 15px auto;"><a href="#" style="color: #3d3d3d !important;font-size: 20px;">Blog</a>
+          </li>
+          <li style="margin: 15px auto;"><a href="#" style="color: #3d3d3d !important;font-size: 20px;">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </nav>
+
+
+
+        <!-- This was one of my side-projects that I never managed to really finish.-->
+        <!-- Feel free to make any changes-->
+        <!-- You need to add GOOGLE API at the bottom of this code (script and add your api key after "=" ) .. "you know the drill" .. -->
+        <!-- If you want to contact me: info@devstep.ee  -->
+        
+
+
+    <body>
+      <div class="container">
+        <header>
+          <div class="row">
+            <div class="col-12" style="text-align: center;">
+              <h1>Calculate order cost</h1>
+              <h3>A simple Javascript calculator for transportation calculation, feel free to make any changes</h3>
+            </div>
+          </div>
+        </header>
+        <section>
+
+        </section>
+        <!-- Price calculator main components -->
+        <section>
+          <div class="row">
+            <div id="accordion" class="col-lg-10 offset-lg-1 col-sm-12">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h2 class="mb-0">1. Material and quantity</h2>
+                </div>
+            
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="card-body">
+                    <div class="card card-body">
+                    
+                    <div class="row">
+                      <div id="materjal" class="col-lg-6 col-sm-12" style="padding: 0px 25px;">
+                            <h2>Choose material</h2>
+                              <div>
+                                <input id="soelutud-muld" type="radio" name="material" value="6">
+                                <label for="soelutud-muld">Material #1</label><br>
+                              </div>
+                              <div>
+                                <input id="soelumata-muld" type="radio" name="material" value="3">
+                                <label for="soelumata-muld">Material #2</label><br>
+                              </div>
+                              <div>
+                                <input id="taiteliiv" type="radio" name="material" value="5">
+                                <label for="taiteliiv">Material #3</label><br>
+                              </div>
+                                
+                            <h3>Sub category</h3>
+                            <div>
+                                <input id="paekillustik4" type="radio" name="material" value="14">
+                                <label for="paekillustik4">Material #4 <span>4-16</span></label><br>
+                              </div>
+                              <div>
+                                <input id="paekillustik16" type="radio" name="material" value="13">
+                                <label for="paekillustik16">Material #5 <span>16-32</span></label><br>
+                              </div>
+                              <div>
+                                <input id="paekillustik32" type="radio"  name="material" value="13">
+                                <label for="paekillustik32">Material #5 <span>32-64</span></label><br>
+                              </div>
+                              <div>
+                                <input id="freesipuru" type="radio"  name="material" value="8">
+                                <label for="freesipuru">Material #6</label><br>
+                              </div>
+                            <h3>Sub category</h3>
+                            <div>
+                                <input id="maakivid100" type="radio"  name="material" value="40">
+                                <label for="maakivid100">Material #7 <span>100-300mm</span></label><br>
+                              </div>  
+                              <div>
+                                <input id="maakivid300" type="radio"  name="material" value="30">
+                                <label for="maakivid300">Material #8 <span>300-600mm</span></label><br>
+                              </div>
+                              <div id="alert-material" class="alert alert-danger hide" style="display: none;">
+                                Vali materiale tüüp
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                              </div>
+                             
+                        </div>
+                        <div class="col-lg-6 col-sm-10 border-left" style="padding: 0px 25px;">
+                          <h2>Quantity</h2>
+                          <div class="row">
+                          <div class="input-group col-md-6 col-sm-10" style="padding: 0px;">
+                              <div style="width: 100%;"><p>Quantity in tonnes</p></div>
+                              <span class="input-group-btn">
+                                <button id="minus-btn" type="button" class="quantity-left-minus btn btn-warning"  data-type="minus" data-field="" onclick="decrease()">
+                              <span class="glyphicon glyphicon-minus">-</span></button>
+                              </span>
+                              <input type="text" id="quantity" name="quantity" class="form-control input-number" value="1" min="1" max="100">
+                              <span class="input-group-btn">
+                                <button id="plus-btn" type="button" class="quantity-right-plus btn btn-warning" data-type="plus" data-field="" onclick="encrease()">
+                                  <span class="glyphicon glyphicon-plus">+</span>
+                                </button>
+                              </span> 
+                            </div>
+                             <div class="col-md-3 col-sm-6" style="padding: 0;">
+                              <p>Nr. of trucks</p>
+                               <div style="margin:17px 0px 0px 10px;font-size: 19px;">
+                                   <div style="display: inline-block;margin:auto;">=</div>
+                                   <input  id="msg5" style="display: inline-block;margin:auto;background: gainsboro;pointer-events:none;width:60%;border-radius: 0;" name="koormad" class="form-control input-number" value="1" min="1" max="100">
+                                </div>
+                            </div>
+                            </div>
+                            
+                            <div class="col-sm-12 col-md-12" style="width: 100%;margin: 30px 0px 5px 0px; padding: 0;">
+                              <h3 style="text-align: left;">Ordering as:</h3>
+                                <div class="form-check" style="margin-bottom: 10px;">
+                                  <input class="form-check-input" type="radio" value="1.2" name="customertype" id="defaultCheck1">
+                                  <label class="form-check-label" for="defaultCheck1" style="text-align: left;">
+                                    A private person
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" value="1" name="customertype" id="defaultCheck2" >
+                                  <label class="form-check-label" for="defaultCheck2" style="text-align: left;">
+                                    A company
+                                  </label>
+                                </div>
+                                <div id="alert-customertype" class="alert alert-danger" style="display: none;">
+                                  Please choose order type!
+                                      <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="background-color: transparent;"><span aria-hidden="true">&times;</span></button>
+                                </div>
+                            </div>
+                            
+                            <div>
+                              <h3>Truck size</h3>
+                              <div class="form-check" style="margin-bottom: 10px;padding-left: 0;">
+                                <input id="kolm" type="radio"  name="veok" value="3">
+                                <label for="kolm">Small truck (3 t)</label><br>
+                              </div>
+                              <div class="form-check" style="margin-bottom: 10px;padding-left: 0;">
+                                <input id="kumme" type="radio"  name="veok" value="10">
+                                <label for="kumme">Med. truck (5-10 t)</label><br>
+                              </div>
+                              <div class="form-check" style="margin-bottom: 10px;padding-left: 0;">
+                                <input id="kakskumment" type="radio"  name="veok" value="20">
+                                <label for="kakskumment">Reg. trcuk (15-20 t)</label><br>
+                              </div>
+                              <div class="form-check" style="margin-bottom: 10px;padding-left: 0;">
+                                <input id="kolmkummend" type="radio"  name="veok" value="30" checked="checked">
+                                <label for="kolmkummend">Big truck (30 t)</label><br>
+                              </div>
+                            </div>
+                        </div>
+    
+                          <div class="col-12" style="text-align: center;margin-top: 25px;">
+                            <button id="next-btn" class="btn btn-warning collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" type="button">
+                              NEXT
+                            </button>
+                          </div>
+    
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+    
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h2 class="mb-0">2. Delivery
+                  </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                  <div class="card-body">
+                    
+            <div class="row">
+              <div class="col-lg-6 col-md-5 col-sm-12">
+                <div id="floating-panel">
+                  <div>
+                    <b>ADRESS: </b>
+                                      
+                      <input name="destination" id="destination-input" class="form-control controls" type="text" placeholder="Enter adress" onchange="calculateAndDisplayRoute()">
+                  </div>
+                  
+                  <div id="alert-asukoht" class="alert alert-danger" style="display: none;">
+                    Enter your destination
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span>
+                  </div>
+                                  
+                  <div>
+                    <p class="lisainfo">If the map application does not provide an exact address, please add additional information in the "additional information" box. </p>
+                    <textarea name="adressi-info" id="lisainfo" class="form-control" cols="50" rows="3" placeholder="Information"></textarea>
+                  </div>
+                  <div id="msg4" class="">
+                      
+                  </div>
+                  </div>
+                                      
+                </div>
+              <div class="col-lg-6 col-md-7 col-sm-12 border-left">
+              <div id="map"></div>
+                  </div>
+                </div>
+              </div>
+                <div class="col-12" style="text-align: center;margin: 15px 0px 35px 0px;">
+                  <button type="button" class="btn btn-dark" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" onclick="empty()">
+                    PREVIOUS
+                  </button>
+                  
+                  <button type="button" id="a-next-btn" class="btn btn-warning collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    NEXT
+                  </button>
+                </div>
+    
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h2 class="mb-0">3. TIME
+                  </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                  <div class="card-body col-12">
+                    <div class="row">
+    
+                      <div class="date col-sm-12">
+                        <h3>CHOOSE DATE</h3>
+                        <div id="datepicker" style="margin: auto;">
+                        </div>
+                        
+                        <div id="alert-date" class="alert alert-danger" style="display: none;text-align: center;">
+                          Date!
+                              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span>
+                        </div>
+                      </div>
+                      <div id="ajad" class="time col-sm-12" style="text-align: center;">
+                        <h3 style="text-align: left;">CHOOES TIME</h3>
+                          
+                        <ul class="ajad">
+                          <li>
+                            <input type="radio" id="b13" name="time" value="8" />
+                            <label for="b13">08:00-13:00</label>
+                          </li>
+                          <li>
+                            <input type="radio" id="a13" name="time" value="13" />
+                            <label for="a13">13:00-18:00</label>
+                          </li>
+                        </ul>
+                        <div id="alert-time" class="alert alert-danger" style="display: none;">
+                          Choose time!
+                              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12" style="text-align: center;margin-bottom: 50px;">
+                    <button type="button" class="btn btn-dark collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      PREVIOUS
+                    </button>
+                    <button type="button" id="date-btn" class="btn btn-warning collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" onclick="kinnitamine()">
+                      NEXT
+                    </button>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="card">
+                <div class="card-header" id="headingFour">
+                  <h2 class="mb-0">4. PRICE AND SUBMIT
+                  </h2>
+                </div>
+                
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                  <div class="card-body col-12">
+                  <!-- <form method="post" action="action_page.php" role="form">  -->
+                    <div class="row">
+                      <div class="date col-sm-12 col-md-5">
+                        <div style="display: block;">
+                          <div id="msg"></div>
+                          <p id="msg3" class="lisainfo">Price includes VAT</p>
+                          <div id="msg2"></div>
+                        </div> 
+                      </div>
+                      <div class="time col-sm-12 col-md-7 border-left" style="text-align: center;">
+                        
+            <h3 style="text-align:left;">Contact</h3>
+                        
+            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+                <!--Grid row-->
+                <div class="row" style="margin: 10px 0px;">
+                    <!--Grid column-->
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <label for="name" class="">Name:</label>
+                            <input type="text" id="name" name="name" class="form-control controls" required>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row" style="margin: 10px 0px;">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <label for="subject" class="">Phone:</label>
+                            <input type="text" id="subject" name="subject" class="form-control controls" required>
+                        </div>
+                    </div>
+                </div>
+                <!--Grid row-->
+                <div>
+                  
+                <div class="row" style="margin: 10px 0px;">
+                    <div class="col-md-12">    
+                    <div class="md-form mb-0">
+                        <label for="company-name" id="co-name-tag">Company: </label> 
+                        <input id="company-name" name="companyname" class="form-control controls" type="text">
+                    </div> 
+                </div>
+                </div>
+                <!--Grid row-->
+                <div class="row" style="margin: 10px 0px;">
+                    <div class="col-md-12">    
+                    <div class="md-form mb-0">
+                        <label for="email" id="email-tag">E-mail: </label> 
+                        <input id="email" name="email" class="form-control controls" type="text">
+                    </div> 
+                </div>
+                </div>
+                <h4 style="text-align: left;margin-top: 25px;">REQUIREMENTS</h4>
+                    <div class="form-check" style="padding: 0;text-align:center;margin-bottom:25px;">
+                        <input class="form-check-input" type="checkbox" value="1" name="kinnitus" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1" style="text-align: left;">
+                            Accept <a href="#" target="_blank">requirements.</a>
+                        </label>
+                    </div>
+                    
+                    <div class="form-check">
+                      <div id="alert-kinnitus" class="alert alert-danger" style="display: none;">
+                        In order to place an order, you must read and agree to the terms and conditions!
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      </div>
+                    </div>
+                    
+                        <input id="client" name="valitud_client" type="hidden">
+                        <input id="valitud_qnt" type="hidden" name="valitud_qnt">
+                        <input id="valitud_material" name="valitud_material" type="hidden">
+                        <input id="valitud_adress" name="tarne" type="hidden">
+                        <input id="valitud_adress_lisainfo" name="tarneinfo" type="hidden">
+                        <input id="chosen_date" name="kpv" type="hidden">
+                        <input id="valitud_time" name="time" type="hidden">
+                        <input id="lprice" name="price" type="hidden">
+                        <input id="lprice2" name="priceKm" type="hidden">
+                  
+                
+                  <div class="col-12 column-reverse" style="text-align: center;margin-bottom: 50px;">
+                    <button type="button" class="btn btn-dark collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseTwo">
+                      PREVIOUS
+                    </button>
+                    <button id="kinnitus-btn" class="btn btn-lg btn-warning collapsed" type="submit" value="submit">
+                     SUBMIT
+                    </button>
+                  </div>
+                </div>
+
+            </form>
+            
+            <!-- end of form -->
+            
+                </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+      </section>
+      </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap-datepicker.js"></script>
+    <script src="assets/js/bootstrap-datepicker.et.min.js"></script>
+
+    <script>
+      var dateToday = new Date();
+      $( function() {
+        $( "#datepicker" ).datepicker({
+          language: 'et', startDate: "today"
+        });
+      } );
+      </script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=InserYourKey" async defer>
+    </script>
+
+</body>
+</html>
